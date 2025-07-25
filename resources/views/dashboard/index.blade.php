@@ -374,8 +374,8 @@
                                 Recommendations</a>
                         </li>
                         <!-- <li class="nav-item">
-                                                                                                                                                                                                            <a class="nav-link" href="{{ route('symptoms') }}"><i class="fa fa-smile"></i> Symptoms</a>
-                                                                                                                                                                                                          </li> -->
+                                                                                                                                                                                                                                <a class="nav-link" href="{{ route('symptoms') }}"><i class="fa fa-smile"></i> Symptoms</a>
+                                                                                                                                                                                                                              </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('subscription.details') }}"> <i
                                     class="fa fa-credit-card-alt"></i> Subscription</a>
@@ -392,8 +392,8 @@
                         </li>
                         <li class="nav-item">
                             <!-- <a class="btn btn-outline-primary btn-sm" href="{{ route('logout') }}">
-                                                                                                                                                                                                              <i class="fa fa-sign-out"></i> Logout
-                                                                                                                                                                                                            </a> -->
+                                                                                                                                                                                                                                  <i class="fa fa-sign-out"></i> Logout
+                                                                                                                                                                                                                                </a> -->
                             <a href="#" class="btn btn-outline-primary btn-sm"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fa fa-sign-out"></i> Logout
@@ -686,7 +686,8 @@
                             @endforelse
 
                             <div class="text-end mb-3">
-                                <a href="{{ route('meal-log.index') }}" class="btn btn-primary"><i class="bi bi-save"></i> Log a Meal</a>
+                                <a href="{{ route('meal-log.index') }}" class="btn btn-primary"><i
+                                        class="bi bi-save"></i> Log a Meal</a>
                             </div>
                         </div>
                     </div>
@@ -812,7 +813,8 @@
                             </div>
                         @endif
                         <div class="mb-3">
-                         <a href="{{ route('meal-suggestions') }}" class="btn btn-primary w-100"><i class="bi bi-grid"></i> View My Meal Suggestions</a>
+                            <a href="{{ route('meal-suggestions') }}" class="btn btn-primary w-100"><i
+                                    class="bi bi-grid"></i> View My Meal Suggestions</a>
                         </div>
                     </div>
                 </div>
@@ -925,9 +927,15 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="value" class="form-label">Note (Morning, Afternoon, Evening or Before
+                            <label for="value" class="form-label">Timing (Morning, Afternoon, Evening or Before
                                 Bed):</label>
-                            <input type="text" class="form-control" id="label" name="label" required>
+                            <select class="form-select" id="label" name="label" required>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Before_Bed">Before Bed</option>
+                            </select>
+                            {{-- <input type="text" class="form-control" id="label" name="label" required> --}}
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Add Reading</button>
                     </form>

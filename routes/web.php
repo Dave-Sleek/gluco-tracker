@@ -348,7 +348,7 @@ Route::put('/admin/meals/{meal}', [AdminMealController::class, 'update'])->name(
 //     URL::forceScheme('https');
 // }
 
-if (env('APP_ENV')) {
-    URL::forceScheme('https');
-}
+// if (env('APP_ENV')) {
+//     URL::forceScheme('https');
+// }
 //});
